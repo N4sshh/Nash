@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box; 
+    }
+
+    .main {
+      width: 100%;
+      background: url("https://scontent.xx.fbcdn.net/v/t1.15752-9/413801369_1377559246464890_8997404234619667219_n.jpg?stp=dst-jpg_p403x403&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHOvqDO7R0Spdg0wKezcPWYWJgyzPENYypYmDLM8Q1jKgP5wIGYZoTKZGQkMkWp7WkbhVyKJz6fBf_xbL7oWOlK&_nc_ohc=asWocb1tro8AX_mCCod&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTdV8BVVGKtLqH5ynWI_DyepH91jxFOtG0kHI6inxknvg&oe=6620A3A8");
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      position: relative;
+      font-family: Arial, sans-serif; 
+    }
+
+    .navbar {
+      width: 86%;
+      display: flex;
+      margin: auto;
+      padding: 15px 0;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar .logo {
+      width: 160px;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    ul li a {
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      color: rgb(0, 116, 214);
+      transition: .4s ease;
+    }
+
+    ul li a:hover {
+      color: white;
+    }
+
+    .info {
+      margin-left: 7%;
+      margin-top: 6%;
+    }
+
+    .info h1 {
+      font-size: 65px;
+      color: rgb(173, 199, 206);
+    }
+
+    .info h3 {
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 24px;
+      color: rgb(173, 199, 206);
+    }
+
+    .info span {
+      color: rgb(0, 116, 214);
+    }
+
+    .info .please-love-me { 
+      text-decoration: none;
+      color: rgb(0, 116, 214);
+      background-color: black;
+      margin: 26px 0;
+      padding: 10px 18px;
+      border-radius: 10px;
+      display: inline-block;
+      transition: .4s ease;
+    }
+
+    .info .please-love-me:hover { 
+      background: rgb(255, 255, 255);
+      color: black; 
+    }
+
+    .image {
+      width: 30%;
+      height: 60%;
+      position: absolute;
+      right: 100px;
+      bottom: 0;
+    }
+
+    .image img {
+      position: absolute;
+      height: 140%;
+      left: 40%;
+      transform: translate(-55%);
+      bottom: 0;
+      transition: left 2s ease;
+    }
+
+    .image:hover .nashdoctor {
+      left: 65%;
+    }
+
+    .icons a {
+      text-decoration: none;
+      color: rgb(0, 116, 214);
+      margin: 0 10px;
+    }
+
+    .icons ion-icon {
+      font-size: 40px;
+      transition: .4s ease;
+    }
+
+    .icons ion-icon:hover {
+      color: rgb(0, 116, 214);
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="main">
+  <div class="navbar">
+    <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/430788972_1493434371204410_7267021349723225959_n.png?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHz35LXHj1jk-9X1OJwtRbTzro1FBl2JxzOujUUGXYnHB5AO1TNVGDATpYnsCuhMHIsXOMrbmFdSW91ZtltW04B&_nc_ohc=SXENPP_q5NoAX-oj7lq&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRjo8aMEee_fI8dva7daqAO6RamRkfsu3auPfrRuDyA_A&oe=6620D504" class="logo">
+    <ul>
+      <li><a href="https://n4sshh.github.io/N4sshh-Activity/PORTFOLIOREPOLYO.html">Home</a></li>
+      <li><a href="https://n4sshh.github.io/N4sshh-Activity/Datiles-Act-3-Page-1.html">About Me</a></li>
+      <li><a href="https://www.youtube.com/shorts/jK5KRwansgU">Skills</a></li>
+      <li><a href="https://www.facebook.com/NashEickerr/about">My Works</a></li>
+      <li><a href="https://www.facebook.com/NashEickerr/about">Contact</a></li>
+    </ul>
+  </div>
+  
+  <div class="info">
+    <h3>Hi I'm <span>Nash Eicker</span></h3>
+    <h1>Feeling <span>W</span>eb <span>D</span>esigner</h1>
+    <h3>Feeling Web Designer From Iloilo, Philippines</h3>
+    <a class="please-love-me" href="https://www.facebook.com/NashEickerr">Please Love Me</a>
+    <div class="icons">
+      <a href="https://www.facebook.com/NashEickerr"><ion-icon name="logo-Facebook"></ion-icon></a>
+      <a href="https://www.instagram.com/nsh_eicker/"><ion-icon name="logo-Instagram"></ion-icon></a>
+      <a href="https://twitter.com/Nash_Eicker"><ion-icon name="logo-Twitter"></ion-icon></a>
+    </div>
+  </div>
+
+  <div class="image">
+      <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/430634994_844820264351412_5795962355842283341_n.png?stp=dst-png_s403x403&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEyQiK9P1_EhUafBcqUHcnpI_1HEcP6UzIj_UcRw_pTMuS6bDBblAf_n7w1LWSKADfaaAbS4XHlAfPqi5Xnvco3&_nc_ohc=HF9n_wF-ceAAX_hkKMx&_nc_oc=AdgRw_KuC5lAGdtqDQ_IS-VPrtBbUFT3AXIzn4a-rYqgW4YsANHD0DsPJFO5xqlTBNOPKReUGSqoNJj6rO3u2keb&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRiQ4S_LfTUTBFfYfdIBQSoHh2d4hpQ54SD_NQjyGrByw&oe=6620A5CB" class="nashdoctor">
+  </div>
+
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</div>
+
+</body>
+</html>
