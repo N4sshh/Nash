@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+  background: url(Images/try.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  font-family: arial;
+}
+
+.navbar {
+  width: 86%;
+  display: flex;
+  margin: auto;
+  padding: 15px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  width: 160px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+ul li a {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(0, 116, 214);
+  transition: .4s ease;
+}
+
+ul li a:hover {
+  color: white;
+}
+
+.info {
+  margin-left: 7%;
+  margin-top: 6%;
+}
+
+.info h1 {
+  font-size: 65px;
+  color: rgb(173, 199, 206);
+}
+
+.info h3 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  color: rgb(173, 199, 206);
+}
+
+.info span {
+  color: rgb(0, 116, 214);
+}
+
+.info a {
+  text-decoration: none;
+  color: rgb(0, 116, 214);
+  background-color: black;
+  margin: 26px 0;
+  padding: 10px 18px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: .4s ease;
+}
+
+.info a:hover {
+  background: rgb(255, 255, 255);
+}
+
+.image {
+  width: 30%;
+  height: 60%;
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+}
+
+.image img {
+  position: absolute;
+  height: 140%;
+  left: 40%;
+  transform: translate(-55%);
+  bottom: 0;
+  transition: left 2s ease;
+}
+
+.image:hover .nashdoctor 
+{
+  left: 65%;
+}
+
+.icons a 
+{
+  text-decoration: none;
+  color: rgb(0, 116, 214);
+  margin: 0 10px
+}
+
+.icons ion-icon {
+  font-size: 40px;
+  margin-left: 5%;
+  margin-right: -60%;
+  transition: .4s ease;
+}
+
+.icons ion-icon:hover
+{
+  color: rgb(0, 116, 214);
+}
+
+  </style>
+</head>
+<body>
+
+<div class="main">
+  <div class="navbar">
+    <img src="Images/nash-eicker-high-resolution-logo-transparent.png">
+    <ul>
+      <li><a href="https://www.facebook.com/NashEickerr/about">Home</a></li>
+      <li><a href="https://n4sshh.github.io/N4sshh-Activity/Datiles-Act-3-Page-2.html">About Me</a></li>
+      <li><a href="#">Skills</a></li>
+      <li><a href="#">My Works</a></li>
+      <li><a href="https://www.facebook.com/NashEickerr/about">Contact</a></li>
+    </ul>
+  </div>
+  
+  <div class="info">
+    <h3>Hi I'm <span>Nash Eicker</span></h3>
+    <h1>Feeling <span>W</span>eb <span>D</span>esigner</h1>
+    <h3>Feeling Web Designer From Iloilo, Philippines</h3>
+    <a class="please-love-me" href="#">Please Love Me</a>
+    <div class="icons">
+      <a href="https://www.facebook.com/NashEickerr"><ion-icon name="logo-Facebook"></ion-icon></a>
+      <a href="https://www.instagram.com/nsh_eicker/"><ion-icon name="logo-Instagram"></ion-icon></a>
+      <a href="https://twitter.com/Nash_Eicker"><ion-icon name="logo-Twitter"></ion-icon></a>
+    </div>
+  </div>
+
+  <div class="image">
+    <img src="Images/nash doctor.png" class="nashdoctor">
+  </div>
+
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>
