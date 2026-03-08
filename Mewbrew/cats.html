@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Our Cats | MewBrew Café</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Skip to content link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.jpg" alt="MewBrew Café Logo" class="logo-img" height="40">
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white fs-2"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link px-3" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="menu.html"><i class="fas fa-coffee me-1"></i> Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active px-3" href="cats.html"><i class="fas fa-paw me-1"></i> Cats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="booking.html"><i class="fas fa-calendar-alt me-1"></i> Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="events.html"><i class="fas fa-gamepad me-1"></i> Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="shop.html"><i class="fas fa-shopping-bag me-1"></i> Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center text-white">
+          <h1 class="display-4 fw-bold mb-3">Meet Our Cats</h1>
+          <p class="lead mb-0 opacity-75">These adorable rescue cats are looking for their forever homes</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <!-- Introduction -->
+      <section class="mb-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <p class="lead">All our cats are rescued, vaccinated, spayed/neutered, and ready for adoption. They love interacting with visitors in our safe, comfortable environment.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter Buttons -->
+      <div class="cat-filters d-flex justify-content-center mb-5">
+        <div class="btn-group flex-wrap" role="group" aria-label="Cat filters">
+          <button type="button" class="btn btn-outline-warning active" data-filter="all">All</button>
+          <button type="button" class="btn btn-outline-warning" data-filter="available">Available</button>
+          <button type="button" class="btn btn-outline-warning" data-filter="favorites">Favorites</button>
+        </div>
+      </div>
+
+      <!-- Cats Gallery -->
+      <section class="mb-5">
+        <h2 class="section-title">Available for Adoption</h2>
+        
+        <div class="row g-4">
+          <!-- Cat 1 - Tangol -->
+          <div class="col-md-6 col-lg-3">
+            <div class="cat-card card h-100 border-0 shadow-sm position-relative">
+              <div class="cat-image">
+                <img src="img/cats/tangol.jpg" alt="Tangol - Orange and White Cat" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h4 mb-3">Tangol</h3>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge bg-light text-dark"><i class="fas fa-birthday-cake me-1"></i> 1 year</span>
+                  <span class="badge bg-light text-dark"><i class="fas fa-palette me-1"></i> Orange & White</span>
+                  <span class="badge bg-light text-dark"><i class="fas fa-heart me-1"></i> Playful & Loud</span>
+                </div>
+                <p class="card-text small mb-4">Tangol loves to roll around and bite stuff! He's a playful and loud cat who keeps everyone entertained with his antics.</p>
+                <div class="cat-status available badge bg-success py-2 px-3">
+                  <i class="fas fa-check-circle me-2"></i> Available
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cat 2 - Xia Ming -->
+          <div class="col-md-6 col-lg-3">
+            <div class="cat-card card h-100 border-0 shadow-sm position-relative">
+              <div class="cat-image">
+                <img src="img/cats/Xian_Ming.jpg" alt="Xia Ming - Tilapya Colored Cat" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h4 mb-3">Xia Ming</h3>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge bg-light text-dark"><i class="fas fa-birthday-cake me-1"></i> 9 months</span>
+                  <span class="badge bg-light text-dark"><i class="fas fa-palette me-1"></i> Tilapya</span>
+                  <span class="badge bg-light text-dark"><i class="fas fa-heart me-1"></i> Shy & Friendly</span>
+                </div>
+                <p class="card-text small mb-4">Xia Ming rarely meows and is always curious about everything. Though shy at first, she warms up quickly and becomes a friendly companion.</p>
+                <div class="cat-status available badge bg-success py-2 px-3">
+                  <i class="fas fa-check-circle me-2"></i> Available
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cat 3 - Ying Yang -->
+          <div class="col-md-6 col-lg-3">
+            <div class="cat-card card h-100 border-0 shadow-sm position-relative">
+              <div class="cat-image">
+                <img src="img/cats/Ying_Yang.jpg" alt="Ying Yang - Black and White Cat" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h4 mb-3">Ying Yang</h3>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge bg-light text-dark"><i class="fas fa-birthday-cake me-1"></i> 9 months</span>
+                  <span class="badge bg-light text-dark"><i class="fas fa-palette me-1"></i> Black & White</span>
+                  <span class="badge bg-light text-dark"><i class="fas fa-heart me-1"></i> Energetic</span>
+                </div>
+                <p class="card-text small mb-4">Ying Yang loves to watch people gossip and is always curious about anything happening around. Very energetic and alert, he never misses any action!</p>
+                <div class="cat-status available badge bg-success py-2 px-3">
+                  <i class="fas fa-check-circle me-2"></i> Available
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cat 4 - Mini -->
+          <div class="col-md-6 col-lg-3">
+            <div class="cat-card card h-100 border-0 shadow-sm position-relative">
+              <div class="cat-image">
+                <img src="img/cats/mini.jpg" alt="Mini - Calico Cat" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body">
+                <h3 class="card-title h4 mb-3">Mini</h3>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="badge bg-light text-dark"><i class="fas fa-birthday-cake me-1"></i> 9 months</span>
+                  <span class="badge bg-light text-dark"><i class="fas fa-palette me-1"></i> Black, Orange & White</span>
+                  <span class="badge bg-light text-dark"><i class="fas fa-heart me-1"></i> Playful & Energetic</span>
+                </div>
+                <p class="card-text small mb-4">Mini is famous for her bread-making skills! She loves to knead on soft blankets and pillows. Very playful and energetic, she'll keep you entertained for hours.</p>
+                <div class="cat-status available badge bg-success py-2 px-3">
+                  <i class="fas fa-check-circle me-2"></i> Available
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Adoption Process -->
+      <section class="mb-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <h2 class="text-center mb-5"><i class="fas fa-info-circle text-warning me-3"></i>Adoption Process</h2>
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                  <div class="step-number mx-auto mb-3">1</div>
+                  <h3 class="h5 mb-3">Visit & Bond</h3>
+                  <p class="small mb-0">Spend time with the cats at our café to see who you connect with.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                  <div class="step-number mx-auto mb-3">2</div>
+                  <h3 class="h5 mb-3">Submit Application</h3>
+                  <p class="small mb-0">Fill out our adoption inquiry form below.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                  <div class="step-number mx-auto mb-3">3</div>
+                  <h3 class="h5 mb-3">Home Check</h3>
+                  <p class="small mb-0">We conduct a virtual home visit to ensure a safe environment.</p>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm text-center p-4">
+                  <div class="step-number mx-auto mb-3">4</div>
+                  <h3 class="h5 mb-3">Finalize Adoption</h3>
+                  <p class="small mb-0">Complete paperwork and bring your new friend home!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Adoption Form -->
+      <section class="form-section">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4 p-md-5">
+                <h2 class="card-title h3 mb-2">Adoption Inquiry</h2>
+                <p class="text-muted mb-4">Interested in adopting one of our cats? Please fill out the form below.</p>
+                
+                <form class="adoption-form needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="name" class="form-label"><i class="fas fa-user text-warning me-2"></i>Your Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                    <div class="invalid-feedback">Please enter your full name.</div>
+                  </div>
+                  
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="email" class="form-label"><i class="fas fa-envelope text-warning me-2"></i>Email Address</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                      <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="phone" class="form-label"><i class="fas fa-phone text-warning me-2"></i>Phone Number</label>
+                      <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                      <div class="invalid-feedback">Please enter your phone number.</div>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="cat" class="form-label"><i class="fas fa-cat text-warning me-2"></i>Cat You're Interested In</label>
+                    <select class="form-select" id="cat" required>
+                      <option value="" disabled selected>Select a cat</option>
+                      <option value="tangol">Tangol</option>
+                      <option value="xia-ming">Xia Ming</option>
+                      <option value="ying-yang">Ying Yang</option>
+                      <option value="mini">Mini</option>
+                      <option value="not-sure">Not Sure Yet</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a cat you're interested in.</div>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="experience" class="form-label"><i class="fas fa-home text-warning me-2"></i>Previous Cat Experience</label>
+                    <textarea class="form-control" id="experience" rows="3" placeholder="Tell us about your experience with pets, if any"></textarea>
+                  </div>
+                  
+                  <div class="mb-4">
+                    <label for="message" class="form-label"><i class="fas fa-comment text-warning me-2"></i>Additional Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Any other information you'd like to share"></textarea>
+                  </div>
+                  
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-warning btn-lg">
+                      <i class="fas fa-paper-plane me-2"></i>Submit Inquiry
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pt-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="img/logo.jpg" alt="MewBrew Café" class="mb-3" style="max-width: 180px;">
+          <p class="mb-1"><i class="fas fa-map-marker-alt text-warning me-2"></i>123 Cat Street, Iloilo City</p>
+          <p><i class="fas fa-clock text-warning me-2"></i>Open Daily: 10:00 AM – 9:00 PM</p>
+        </div>
+        
+        <div class="col-md-4">
+          <h4 class="h5 mb-3">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="menu.html" class="text-decoration-none">Menu</a></li>
+            <li class="mb-2"><a href="cats.html" class="text-decoration-none">Our Cats</a></li>
+            <li class="mb-2"><a href="booking.html" class="text-decoration-none">Booking</a></li>
+            <li class="mb-2"><a href="events.html" class="text-decoration-none">Events</a></li>
+            <li class="mb-2"><a href="shop.html" class="text-decoration-none">Shop</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-4">
+          <h4 class="h5 mb-3">Connect With Us</h4>
+          <div class="d-flex gap-2 mb-3">
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <p class="mb-1"><i class="fas fa-envelope text-warning me-2"></i>contact@mewbrew.com</p>
+          <p><i class="fas fa-phone text-warning me-2"></i>(033) 123-4567</p>
+        </div>
+      </div>
+      
+      <div class="text-center pt-4 mt-4 border-top">
+        <p class="mb-0">© 2026 MewBrew Café. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

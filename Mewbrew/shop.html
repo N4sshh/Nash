@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | MewBrew Café</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Skip to content link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.jpg" alt="MewBrew Café Logo" class="logo-img" height="40">
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white fs-2"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link px-3" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="menu.html"><i class="fas fa-coffee me-1"></i> Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="cats.html"><i class="fas fa-paw me-1"></i> Cats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="booking.html"><i class="fas fa-calendar-alt me-1"></i> Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="events.html"><i class="fas fa-gamepad me-1"></i> Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active px-3" href="shop.html"><i class="fas fa-shopping-bag me-1"></i> Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center text-white">
+          <h1 class="display-4 fw-bold mb-3">MewBrew Merchandise</h1>
+          <p class="lead mb-0 opacity-75">Take home a piece of MewBrew with our cat-themed merchandise</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <!-- Featured Products -->
+      <section class="mb-5">
+        <div class="d-flex align-items-center mb-4">
+          <div class="icon-wrapper me-3">
+            <i class="fas fa-star"></i>
+          </div>
+          <h2 class="section-title text-start mb-0">Featured Products</h2>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Product 1 - Mug -->
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow-sm product-card">
+              <div class="product-image">
+                <img src="img/products/mug.jpg" alt="MewBrew Ceramic Mug" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body">
+                <h3 class="h4 mb-3">MewBrew Ceramic Mug</h3>
+                <p class="small text-muted mb-4">High-quality ceramic mug with our signature cat logo. Microwave and dishwasher safe.</p>
+                <div class="display-6 text-warning mb-4">₱250</div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-warning add-to-cart" data-product="MewBrew Ceramic Mug" data-price="250">
+                    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                  </button>
+                  <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#productModal1">
+                    <i class="fas fa-info-circle me-2"></i>Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 2 - Tshirt -->
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow-sm product-card">
+              <div class="product-image">
+                <img src="img/products/tshirt.jpg" alt="Cat Café T-Shirt" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body">
+                <h3 class="h4 mb-3">Cat Café T-Shirt</h3>
+                <p class="small text-muted mb-4">Comfortable cotton t-shirt with cute cat and coffee design. Available in multiple sizes.</p>
+                <div class="display-6 text-warning mb-4">₱500</div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-warning add-to-cart" data-product="Cat Café T-Shirt" data-price="500">
+                    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                  </button>
+                  <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#productModal2">
+                    <i class="fas fa-info-circle me-2"></i>Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 3 - Bag -->
+          <div class="col-lg-4">
+            <div class="card h-100 border-0 shadow-sm product-card">
+              <div class="product-image">
+                <img src="img/products/bag.jpg" alt="Eco-Friendly Tote Bag" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body">
+                <h3 class="h4 mb-3">Eco-Friendly Tote Bag</h3>
+                <p class="small text-muted mb-4">Reusable canvas tote bag with our cat café illustration. Perfect for shopping or carrying books.</p>
+                <div class="display-6 text-warning mb-4">₱350</div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-warning add-to-cart" data-product="Eco-Friendly Tote Bag" data-price="350">
+                    <i class="fas fa-cart-plus me-2"></i>Add to Cart
+                  </button>
+                  <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#productModal3">
+                    <i class="fas fa-info-circle me-2"></i>Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- All Products -->
+      <section class="mb-5">
+        <div class="d-flex align-items-center mb-4">
+          <div class="icon-wrapper me-3">
+            <i class="fas fa-box-open"></i>
+          </div>
+          <h2 class="section-title text-start mb-0">All Products</h2>
+        </div>
+        
+        <!-- Filter Buttons -->
+        <div class="d-flex flex-wrap gap-2 mb-4 products-filter">
+          <button class="btn btn-outline-warning filter-btn active" data-filter="all">All Items</button>
+          <button class="btn btn-outline-warning filter-btn" data-filter="apparel">Apparel</button>
+          <button class="btn btn-outline-warning filter-btn" data-filter="home">Home & Kitchen</button>
+          <button class="btn btn-outline-warning filter-btn" data-filter="accessories">Accessories</button>
+        </div>
+        
+        <!-- Products Grid -->
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+          <!-- Product 1 - Mug -->
+          <div class="col product-item" data-category="home">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="item-image">
+                <img src="img/products/mug.jpg" alt="Ceramic Mug" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body p-3">
+                <h4 class="h6 mb-2">Ceramic Mug</h4>
+                <div class="h5 text-warning mb-3">₱250</div>
+                <button class="btn btn-outline-warning w-100 add-to-cart" data-product="Ceramic Mug" data-price="250">
+                  <i class="fas fa-cart-plus me-2"></i>Add
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 2 - Tshirt -->
+          <div class="col product-item" data-category="apparel">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="item-image">
+                <img src="img/products/tshirt.jpg" alt="T-Shirt" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body p-3">
+                <h4 class="h6 mb-2">T-Shirt</h4>
+                <div class="h5 text-warning mb-3">₱500</div>
+                <button class="btn btn-outline-warning w-100 add-to-cart" data-product="T-Shirt" data-price="500">
+                  <i class="fas fa-cart-plus me-2"></i>Add
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 3 - Bag -->
+          <div class="col product-item" data-category="accessories">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="item-image">
+                <img src="img/products/bag.jpg" alt="Tote Bag" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body p-3">
+                <h4 class="h6 mb-2">Tote Bag</h4>
+                <div class="h5 text-warning mb-3">₱350</div>
+                <button class="btn btn-outline-warning w-100 add-to-cart" data-product="Tote Bag" data-price="350">
+                  <i class="fas fa-cart-plus me-2"></i>Add
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 4 - Cookie Cutter -->
+          <div class="col product-item" data-category="home">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="item-image">
+                <img src="img/products/cookie_cutter.jpg" alt="Cat-shaped Cookie Cutters" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body p-3">
+                <h4 class="h6 mb-2">Cookie Cutters</h4>
+                <div class="h5 text-warning mb-3">₱180</div>
+                <button class="btn btn-outline-warning w-100 add-to-cart" data-product="Cat-shaped Cookie Cutters" data-price="180">
+                  <i class="fas fa-cart-plus me-2"></i>Add
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 5 - Keychain -->
+          <div class="col product-item" data-category="accessories">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="item-image">
+                <img src="img/products/keychain.jpg" alt="Cat Keychain" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body p-3">
+                <h4 class="h6 mb-2">Cat Keychain</h4>
+                <div class="h5 text-warning mb-3">₱120</div>
+                <button class="btn btn-outline-warning w-100 add-to-cart" data-product="Cat Keychain" data-price="120">
+                  <i class="fas fa-cart-plus me-2"></i>Add
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 6 - Cap -->
+          <div class="col product-item" data-category="apparel">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="item-image">
+                <img src="img/products/cap.jpg" alt="Cat Café Cap" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body p-3">
+                <h4 class="h6 mb-2">Cat Café Cap</h4>
+                <div class="h5 text-warning mb-3">₱400</div>
+                <button class="btn btn-outline-warning w-100 add-to-cart" data-product="Cat Café Cap" data-price="400">
+                  <i class="fas fa-cart-plus me-2"></i>Add
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 7 - Photo Frame -->
+          <div class="col product-item" data-category="home">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="item-image">
+                <img src="img/products/photo_frame.jpg" alt="Cat Photo Frame" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body p-3">
+                <h4 class="h6 mb-2">Photo Frame</h4>
+                <div class="h5 text-warning mb-3">₱300</div>
+                <button class="btn btn-outline-warning w-100 add-to-cart" data-product="Cat Photo Frame" data-price="300">
+                  <i class="fas fa-cart-plus me-2"></i>Add
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product 8 - Sticker -->
+          <div class="col product-item" data-category="accessories">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="item-image">
+                <img src="img/products/sticker.jpg" alt="Cat Stickers Pack" class="img-fluid w-100 h-100">
+              </div>
+              <div class="card-body p-3">
+                <h4 class="h6 mb-2">Stickers Pack</h4>
+                <div class="h5 text-warning mb-3">₱80</div>
+                <button class="btn btn-outline-warning w-100 add-to-cart" data-product="Cat Stickers Pack" data-price="80">
+                  <i class="fas fa-cart-plus me-2"></i>Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Support Note -->
+      <section class="mb-5">
+        <div class="card border-0 shadow-sm text-white bg-success bg-opacity-75">
+          <div class="card-body p-4 p-md-5">
+            <div class="row align-items-center">
+              <div class="col-md-2 text-center mb-3 mb-md-0">
+                <i class="fas fa-hands-helping fa-4x"></i>
+              </div>
+              <div class="col-md-10">
+                <h3 class="h3 mb-3">Your Purchase Supports Rescue Cats</h3>
+                <p class="lead mb-0">20% of all merchandise sales goes directly to local cat rescue organizations and helps care for our in-café cats.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Shipping Info -->
+      <section>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center p-4">
+              <div class="info-icon mx-auto mb-3">
+                <i class="fas fa-truck"></i>
+              </div>
+              <h4 class="h5 mb-3">Free Local Pickup</h4>
+              <p class="small mb-0">Pick up your order at the café with no shipping fees.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center p-4">
+              <div class="info-icon mx-auto mb-3">
+                <i class="fas fa-shipping-fast"></i>
+              </div>
+              <h4 class="h5 mb-3">Nationwide Delivery</h4>
+              <p class="small mb-0">We ship across the Philippines. Delivery fee: ₱100.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center p-4">
+              <div class="info-icon mx-auto mb-3">
+                <i class="fas fa-undo-alt"></i>
+              </div>
+              <h4 class="h5 mb-3">Easy Returns</h4>
+              <p class="small mb-0">30-day return policy for unused items.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center p-4">
+              <div class="info-icon mx-auto mb-3">
+                <i class="fas fa-gift"></i>
+              </div>
+              <h4 class="h5 mb-3">Gift Wrapping</h4>
+              <p class="small mb-0">Free gift wrapping available for all orders.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Shopping Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-warning"><i class="fas fa-shopping-cart me-2"></i>Your Shopping Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-4" id="cartItemsContainer">
+            <div class="text-center py-5">
+              <i class="fas fa-shopping-cart fa-4x text-muted mb-3"></i>
+              <p class="text-muted">Your cart is empty</p>
+            </div>
+          </div>
+          
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <div class="row mb-2">
+                <div class="col-6">Subtotal:</div>
+                <div class="col-6 text-end fw-bold" id="cartSubtotal">₱0</div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-6">Shipping:</div>
+                <div class="col-6 text-end fw-bold" id="cartShipping">₱0</div>
+              </div>
+              <hr class="my-3">
+              <div class="row mb-4">
+                <div class="col-6 h5 mb-0">Total:</div>
+                <div class="col-6 text-end h5 mb-0 text-warning" id="cartTotal">₱0</div>
+              </div>
+              <button class="btn btn-warning w-100 btn-lg" id="checkoutBtn" disabled>
+                <i class="fas fa-credit-card me-2"></i>Proceed to Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-warning"><i class="fas fa-credit-card me-2"></i>Checkout</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="checkoutForm">
+            <div class="mb-3">
+              <label for="checkoutName" class="form-label">Full Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="checkoutName" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="checkoutEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="checkoutEmail" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="checkoutPhone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+              <input type="tel" class="form-control" id="checkoutPhone" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="checkoutAddress" class="form-label">Delivery Address</label>
+              <textarea class="form-control" id="checkoutAddress" rows="3"></textarea>
+              <div class="form-text small">Only required for nationwide delivery</div>
+            </div>
+            
+            <div class="mb-4">
+              <label class="form-label">Shipping Method <span class="text-danger">*</span></label>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="radio" name="shippingMethod" id="pickup" value="pickup" checked>
+                <label class="form-check-label" for="pickup">
+                  <strong>Local Pickup</strong> - Free
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="shippingMethod" id="delivery" value="delivery">
+                <label class="form-check-label" for="delivery">
+                  <strong>Nationwide Delivery</strong> - ₱100
+                </label>
+              </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-body">
+                <h6 class="card-title mb-3">Order Summary</h6>
+                <div class="row mb-2">
+                  <div class="col-6">Items:</div>
+                  <div class="col-6 text-end" id="checkoutItems">₱0</div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-6">Shipping:</div>
+                  <div class="col-6 text-end" id="checkoutShipping">Free!</div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-6">Cat Rescue Support (20%):</div>
+                  <div class="col-6 text-end text-success" id="checkoutSupport">₱0</div>
+                </div>
+                <hr class="my-3">
+                <div class="row mb-0">
+                  <div class="col-6 h5 mb-0">Total:</div>
+                  <div class="col-6 text-end h5 mb-0 text-warning" id="checkoutTotal">₱0</div>
+                </div>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-warning w-100 btn-lg" id="confirmCheckout">
+              <i class="fas fa-lock me-2"></i>Complete Purchase
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-success"><i class="fas fa-check-circle me-2"></i>Order Confirmed!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <i class="fas fa-shopping-bag fa-4x text-warning mb-3"></i>
+          <h4 class="mb-3">Thank You for Your Order!</h4>
+          <div class="bg-light rounded p-3 mb-3">
+            <p class="mb-1"><strong>Order ID:</strong> <span id="orderId">ORDER-123456</span></p>
+            <p class="mb-1"><strong>Total:</strong> <span id="orderTotal">₱0</span></p>
+            <p class="mb-0"><strong>Support Amount:</strong> <span id="orderSupport">₱0</span></p>
+          </div>
+          <p class="small mb-3">Your support helps rescue cats in our community. We'll send a confirmation email shortly.</p>
+          <div class="d-flex gap-2 justify-content-center">
+            <button class="btn btn-outline-warning" id="copyOrderId">
+              <i class="fas fa-copy me-1"></i>Copy ID
+            </button>
+            <button class="btn btn-warning" data-bs-dismiss="modal" id="continueShopping">
+              Continue Shopping
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Cart Toggle Button -->
+  <button class="cart-toggle" onclick="window.mewbrew?.shopCartToggle()">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+  </button>
+
+  <!-- Product Detail Modals -->
+  <div class="modal fade" id="productModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">MewBrew Ceramic Mug</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center mb-4">
+            <img src="img/products/mug.jpg" alt="MewBrew Ceramic Mug" class="img-fluid rounded" style="max-height: 200px;">
+          </div>
+          <p class="small mb-3">A high-quality ceramic mug featuring our signature cat logo. Perfect for enjoying your favorite hot beverages at home or work.</p>
+          <ul class="small mb-3">
+            <li>Microwave and dishwasher safe</li>
+            <li>350ml capacity</li>
+            <li>High-quality ceramic construction</li>
+          </ul>
+          <div class="h4 text-warning mb-3">₱250</div>
+          <button class="btn btn-warning w-100 add-to-cart" data-product="MewBrew Ceramic Mug" data-price="250" data-bs-dismiss="modal">
+            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="productModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Cat Café T-Shirt</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center mb-4">
+            <img src="img/products/tshirt.jpg" alt="Cat Café T-Shirt" class="img-fluid rounded" style="max-height: 200px;">
+          </div>
+          <p class="small mb-3">Comfortable cotton t-shirt featuring our adorable cat and coffee design. Show your love for MewBrew wherever you go!</p>
+          <ul class="small mb-3">
+            <li>100% premium cotton</li>
+            <li>Available in S, M, L, XL</li>
+            <li>Machine washable</li>
+          </ul>
+          <div class="h4 text-warning mb-3">₱500</div>
+          <button class="btn btn-warning w-100 add-to-cart" data-product="Cat Café T-Shirt" data-price="500" data-bs-dismiss="modal">
+            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="productModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Eco-Friendly Tote Bag</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center mb-4">
+            <img src="img/products/bag.jpg" alt="Eco-Friendly Tote Bag" class="img-fluid rounded" style="max-height: 200px;">
+          </div>
+          <p class="small mb-3">Reusable canvas tote bag with our beautiful cat café illustration. Perfect for shopping, carrying books, or as an everyday bag.</p>
+          <ul class="small mb-3">
+            <li>100% organic cotton canvas</li>
+            <li>Reinforced handles</li>
+            <li>Dimensions: 40cm x 40cm</li>
+          </ul>
+          <div class="h4 text-warning mb-3">₱350</div>
+          <button class="btn btn-warning w-100 add-to-cart" data-product="Eco-Friendly Tote Bag" data-price="350" data-bs-dismiss="modal">
+            <i class="fas fa-cart-plus me-2"></i>Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="pt-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="img/logo.jpg" alt="MewBrew Café" class="mb-3" style="max-width: 180px;">
+          <p class="mb-1"><i class="fas fa-map-marker-alt text-warning me-2"></i>123 Cat Street, Iloilo City</p>
+          <p><i class="fas fa-clock text-warning me-2"></i>Open Daily: 10:00 AM – 9:00 PM</p>
+        </div>
+        
+        <div class="col-md-4">
+          <h4 class="h5 mb-3">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="menu.html" class="text-decoration-none">Menu</a></li>
+            <li class="mb-2"><a href="cats.html" class="text-decoration-none">Our Cats</a></li>
+            <li class="mb-2"><a href="booking.html" class="text-decoration-none">Booking</a></li>
+            <li class="mb-2"><a href="events.html" class="text-decoration-none">Events</a></li>
+            <li class="mb-2"><a href="shop.html" class="text-decoration-none">Shop</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-4">
+          <h4 class="h5 mb-3">Connect With Us</h4>
+          <div class="d-flex gap-2 mb-3">
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <p class="mb-1"><i class="fas fa-envelope text-warning me-2"></i>contact@mewbrew.com</p>
+          <p><i class="fas fa-phone text-warning me-2"></i>(033) 123-4567</p>
+        </div>
+      </div>
+      
+      <div class="text-center pt-4 mt-4 border-top">
+        <p class="mb-0">© 2026 MewBrew Café. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

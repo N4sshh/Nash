@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu | MewBrew Café</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Skip to content link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.jpg" alt="MewBrew Café Logo" class="logo-img" height="40">
+      </a>
+      
+      <!-- Cart Icon -->
+      <div class="cart-icon order-lg-3 ms-auto me-2 me-lg-3" onclick="window.mewbrew?.toggleCart()" role="button">
+        <i class="fas fa-shopping-cart fs-5"></i>
+        <span class="cart-count badge rounded-pill bg-warning text-dark">0</span>
+      </div>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white fs-2"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link px-3" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active px-3" href="menu.html"><i class="fas fa-coffee me-1"></i> Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="cats.html"><i class="fas fa-paw me-1"></i> Cats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="booking.html"><i class="fas fa-calendar-alt me-1"></i> Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="events.html"><i class="fas fa-gamepad me-1"></i> Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="shop.html"><i class="fas fa-shopping-bag me-1"></i> Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Overlay -->
+  <div class="cart-overlay" onclick="window.mewbrew?.toggleCart()"></div>
+
+  <!-- Cart Sidebar -->
+  <div class="cart-sidebar">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="h5 mb-0">Your Order</h3>
+      <button class="btn-close" onclick="window.mewbrew?.toggleCart()" aria-label="Close"></button>
+    </div>
+    
+    <div id="cart-items">
+      <div class="text-center py-5">
+        <i class="fas fa-shopping-cart fa-3x text-muted mb-3"></i>
+        <p class="text-muted">Your cart is empty</p>
+        <p class="small text-muted">Add some delicious items from our menu!</p>
+      </div>
+    </div>
+    
+    <div id="cart-summary" style="display: none;">
+      <hr class="my-3">
+      <div class="d-flex justify-content-between mb-2">
+        <span>Subtotal:</span>
+        <span id="subtotal" class="fw-bold">₱0</span>
+      </div>
+      <div class="d-flex justify-content-between mb-3">
+        <span>Service Fee (5%):</span>
+        <span id="service-fee" class="fw-bold">₱0</span>
+      </div>
+      <div class="d-flex justify-content-between mb-3 fs-5 fw-bold">
+        <span>Total:</span>
+        <span id="total" class="text-warning">₱0</span>
+      </div>
+      
+      <button class="btn btn-warning w-100 py-2 checkout-btn" onclick="window.mewbrew?.showCheckoutModal()">
+        <i class="fas fa-credit-card me-2"></i>Proceed to Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <header class="page-header py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center text-white">
+          <h1 class="display-4 fw-bold mb-3">MewBrew Menu</h1>
+          <p class="lead mb-0 opacity-75">Handcrafted with love, served with purrs</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <!-- Search and Filters -->
+      <div class="row mb-5">
+        <div class="col-md-6 mx-auto">
+          <div class="input-group mb-3">
+            <span class="input-group-text bg-white border-end-0">
+              <i class="fas fa-search text-warning"></i>
+            </span>
+            <input type="search" class="form-control border-start-0 ps-0" placeholder="Search menu items..." id="menuSearch">
+            <button class="btn btn-outline-warning" type="button" id="clearSearch">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="d-flex justify-content-center mb-5">
+        <div class="btn-group flex-wrap" role="group" aria-label="Menu filters">
+          <button type="button" class="btn btn-outline-warning active" data-filter="all">All Items</button>
+          <button type="button" class="btn btn-outline-warning" data-filter="coffee">Coffee</button>
+          <button type="button" class="btn btn-outline-warning" data-filter="pastry">Pastries</button>
+          <button type="button" class="btn btn-outline-warning" data-filter="non-coffee">Non-Coffee</button>
+        </div>
+      </div>
+      
+      <!-- Coffee & Espresso -->
+      <section class="mb-5">
+        <div class="d-flex align-items-center mb-4">
+          <div class="icon-wrapper me-3">
+            <i class="fas fa-coffee"></i>
+          </div>
+          <h2 class="section-title text-start mb-0">Coffee & Espresso</h2>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Espresso -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm menu-item">
+              <img src="img/menu/espresso.jpg" class="card-img-top menu-item-img" alt="Espresso">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 mb-0">Espresso</h3>
+                  <span class="badge bg-warning text-dark rounded-pill px-3 py-2">₱100</span>
+                </div>
+                <p class="small text-muted mb-3">Strong, rich coffee served in a small cup</p>
+                <div class="mb-3">
+                  <span class="badge bg-light text-dark rounded-pill me-1">Hot</span>
+                  <span class="badge bg-light text-dark rounded-pill">Strong</span>
+                </div>
+                <button class="btn btn-warning w-100 rounded-pill order-btn" onclick="window.mewbrew?.addToCart({id: 'espresso', name: 'Espresso', price: 100, category: 'coffee', available: true})">
+                  <i class="fas fa-plus-circle me-2"></i>Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Cappuccino -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm menu-item">
+              <img src="img/menu/cappuccino.jpg" class="card-img-top menu-item-img" alt="Cappuccino">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 mb-0">Cappuccino</h3>
+                  <span class="badge bg-warning text-dark rounded-pill px-3 py-2">₱130</span>
+                </div>
+                <p class="small text-muted mb-3">Equal parts espresso, steamed milk, and milk foam</p>
+                <div class="mb-3">
+                  <span class="badge bg-light text-dark rounded-pill me-1">Foamy</span>
+                  <span class="badge bg-light text-dark rounded-pill">Classic</span>
+                </div>
+                <button class="btn btn-warning w-100 rounded-pill order-btn" onclick="window.mewbrew?.addToCart({id: 'cappuccino', name: 'Cappuccino', price: 130, category: 'coffee', available: true})">
+                  <i class="fas fa-plus-circle me-2"></i>Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Latte -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm menu-item">
+              <img src="img/menu/latte.jpg" class="card-img-top menu-item-img" alt="Latte">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 mb-0">Latte</h3>
+                  <span class="badge bg-warning text-dark rounded-pill px-3 py-2">₱140</span>
+                </div>
+                <p class="small text-muted mb-3">Espresso with steamed milk and a light foam layer</p>
+                <div class="mb-3">
+                  <span class="badge bg-light text-dark rounded-pill me-1">Creamy</span>
+                  <span class="badge bg-light text-dark rounded-pill">Mild</span>
+                </div>
+                <button class="btn btn-warning w-100 rounded-pill order-btn" onclick="window.mewbrew?.addToCart({id: 'latte', name: 'Latte', price: 140, category: 'coffee', available: true})">
+                  <i class="fas fa-plus-circle me-2"></i>Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Mocha -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm menu-item">
+              <img src="img/menu/mocha.jpg" class="card-img-top menu-item-img" alt="Mocha">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 mb-0">Mocha</h3>
+                  <span class="badge bg-warning text-dark rounded-pill px-3 py-2">₱150</span>
+                </div>
+                <p class="small text-muted mb-3">Chocolate-infused espresso with steamed milk</p>
+                <div class="mb-3">
+                  <span class="badge bg-light text-dark rounded-pill me-1">Chocolate</span>
+                  <span class="badge bg-light text-dark rounded-pill">Sweet</span>
+                </div>
+                <button class="btn btn-warning w-100 rounded-pill order-btn" onclick="window.mewbrew?.addToCart({id: 'mocha', name: 'Mocha', price: 150, category: 'coffee', available: true})">
+                  <i class="fas fa-plus-circle me-2"></i>Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pastries & Desserts -->
+      <section class="mb-5">
+        <div class="d-flex align-items-center mb-4">
+          <div class="icon-wrapper me-3">
+            <i class="fas fa-cookie-bite"></i>
+          </div>
+          <h2 class="section-title text-start mb-0">Pastries & Desserts</h2>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Croissant -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm menu-item">
+              <img src="img/menu/croissant.jpg" class="card-img-top menu-item-img" alt="Croissant">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 mb-0">Croissant</h3>
+                  <span class="badge bg-warning text-dark rounded-pill px-3 py-2">₱80</span>
+                </div>
+                <p class="small text-muted mb-3">Buttery, flaky pastry made with layered dough</p>
+                <div class="mb-3">
+                  <span class="badge bg-light text-dark rounded-pill me-1">Buttery</span>
+                  <span class="badge bg-light text-dark rounded-pill">Fresh</span>
+                </div>
+                <button class="btn btn-warning w-100 rounded-pill order-btn" onclick="window.mewbrew?.addToCart({id: 'croissant', name: 'Croissant', price: 80, category: 'pastry', available: true})">
+                  <i class="fas fa-plus-circle me-2"></i>Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chocolate Muffin -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm menu-item">
+              <img src="img/menu/muffin.jpg" class="card-img-top menu-item-img" alt="Chocolate Muffin">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 mb-0">Chocolate Muffin</h3>
+                  <span class="badge bg-warning text-dark rounded-pill px-3 py-2">₱90</span>
+                </div>
+                <p class="small text-muted mb-3">Rich chocolate muffin with chocolate chips</p>
+                <div class="mb-3">
+                  <span class="badge bg-light text-dark rounded-pill me-1">Chocolate</span>
+                  <span class="badge bg-light text-dark rounded-pill">Moist</span>
+                </div>
+                <button class="btn btn-warning w-100 rounded-pill order-btn" onclick="window.mewbrew?.addToCart({id: 'chocolate-muffin', name: 'Chocolate Muffin', price: 90, category: 'pastry', available: true})">
+                  <i class="fas fa-plus-circle me-2"></i>Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Brownies -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm menu-item">
+              <img src="img/menu/brownies.jpg" class="card-img-top menu-item-img" alt="Brownies">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 mb-0">Brownies</h3>
+                  <span class="badge bg-warning text-dark rounded-pill px-3 py-2">₱85</span>
+                </div>
+                <p class="small text-muted mb-3">Rich, fudgy chocolate brownies with a crispy top</p>
+                <div class="mb-3">
+                  <span class="badge bg-light text-dark rounded-pill me-1">Chocolate</span>
+                  <span class="badge bg-light text-dark rounded-pill">Fudgy</span>
+                </div>
+                <button class="btn btn-warning w-100 rounded-pill order-btn" onclick="window.mewbrew?.addToCart({id: 'brownies', name: 'Brownies', price: 85, category: 'pastry', available: true})">
+                  <i class="fas fa-plus-circle me-2"></i>Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Cherry Pie -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm menu-item">
+              <img src="img/menu/cherry_pie.jpg" class="card-img-top menu-item-img" alt="Cherry Pie">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 mb-0">Cherry Pie</h3>
+                  <span class="badge bg-warning text-dark rounded-pill px-3 py-2">₱95</span>
+                </div>
+                <p class="small text-muted mb-3">Classic cherry pie with flaky crust and sweet cherry filling</p>
+                <div class="mb-3">
+                  <span class="badge bg-light text-dark rounded-pill me-1">Fruity</span>
+                  <span class="badge bg-light text-dark rounded-pill">Sweet</span>
+                </div>
+                <button class="btn btn-warning w-100 rounded-pill order-btn" onclick="window.mewbrew?.addToCart({id: 'cherry-pie', name: 'Cherry Pie', price: 95, category: 'pastry', available: true})">
+                  <i class="fas fa-plus-circle me-2"></i>Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Non-Coffee Drinks -->
+      <section class="mb-5">
+        <div class="d-flex align-items-center mb-4">
+          <div class="icon-wrapper me-3">
+            <i class="fas fa-glass-whiskey"></i>
+          </div>
+          <h2 class="section-title text-start mb-0">Non-Coffee Drinks</h2>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Fruit Tea -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm menu-item">
+              <img src="img/menu/fruit_tea.jpg" class="card-img-top menu-item-img" alt="Fruit Tea">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 mb-0">Fruit Tea</h3>
+                  <span class="badge bg-warning text-dark rounded-pill px-3 py-2">₱110</span>
+                </div>
+                <p class="small text-muted mb-3">Refreshing tea with natural fruit flavors</p>
+                <div class="mb-3">
+                  <span class="badge bg-light text-dark rounded-pill me-1">Fruity</span>
+                  <span class="badge bg-light text-dark rounded-pill">Refreshing</span>
+                </div>
+                <button class="btn btn-warning w-100 rounded-pill order-btn" onclick="window.mewbrew?.addToCart({id: 'fruit-tea', name: 'Fruit Tea', price: 110, category: 'non-coffee', available: true})">
+                  <i class="fas fa-plus-circle me-2"></i>Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chocolate Milk Tea -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm menu-item">
+              <img src="img/menu/chocolate_milktea.jpg" class="card-img-top menu-item-img" alt="Chocolate Milk Tea">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 mb-0">Chocolate Milk Tea</h3>
+                  <span class="badge bg-warning text-dark rounded-pill px-3 py-2">₱120</span>
+                </div>
+                <p class="small text-muted mb-3">Creamy milk tea with rich chocolate flavor and tapioca pearls</p>
+                <div class="mb-3">
+                  <span class="badge bg-light text-dark rounded-pill me-1">Creamy</span>
+                  <span class="badge bg-light text-dark rounded-pill">With Pearls</span>
+                </div>
+                <button class="btn btn-warning w-100 rounded-pill order-btn" onclick="window.mewbrew?.addToCart({id: 'chocolate-milktea', name: 'Chocolate Milk Tea', price: 120, category: 'non-coffee', available: true})">
+                  <i class="fas fa-plus-circle me-2"></i>Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Iced Matcha -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm menu-item">
+              <img src="img/menu/iced_matcha.jpg" class="card-img-top menu-item-img" alt="Iced Matcha">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 mb-0">Iced Matcha</h3>
+                  <span class="badge bg-warning text-dark rounded-pill px-3 py-2">₱95</span>
+                </div>
+                <p class="small text-muted mb-3">Refreshing cold matcha green tea served over ice</p>
+                <div class="mb-3">
+                  <span class="badge bg-light text-dark rounded-pill me-1">Refreshing</span>
+                  <span class="badge bg-light text-dark rounded-pill">Cold</span>
+                </div>
+                <button class="btn btn-warning w-100 rounded-pill order-btn" onclick="window.mewbrew?.addToCart({id: 'iced-matcha', name: 'Iced Matcha', price: 95, category: 'non-coffee', available: true})">
+                  <i class="fas fa-plus-circle me-2"></i>Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Matcha Latte -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm menu-item">
+              <img src="img/menu/matcha_lattee.jpg" class="card-img-top menu-item-img" alt="Matcha Latte">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <h3 class="h5 mb-0">Matcha Latte</h3>
+                  <span class="badge bg-warning text-dark rounded-pill px-3 py-2">₱135</span>
+                </div>
+                <p class="small text-muted mb-3">Japanese green tea with steamed milk</p>
+                <div class="mb-3">
+                  <span class="badge bg-light text-dark rounded-pill me-1">Green Tea</span>
+                  <span class="badge bg-light text-dark rounded-pill">Healthy</span>
+                </div>
+                <button class="btn btn-warning w-100 rounded-pill order-btn" onclick="window.mewbrew?.addToCart({id: 'matcha-latte', name: 'Matcha Latte', price: 135, category: 'non-coffee', available: true})">
+                  <i class="fas fa-plus-circle me-2"></i>Add to Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Allergy Information -->
+      <div class="alert alert-warning border-0 shadow-sm d-flex align-items-center mt-4" role="alert">
+        <i class="fas fa-exclamation-triangle fs-4 me-3"></i>
+        <div>
+          <h4 class="alert-heading h6 mb-1">Allergy Information</h4>
+          <p class="small mb-0">Please inform our staff of any food allergies. We offer gluten-free and dairy-free options upon request.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Checkout Modal -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="checkoutModalLabel">
+            <i class="fas fa-credit-card text-warning me-2"></i>Complete Your Order
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="orderForm">
+            <div class="row">
+              <div class="col-md-6">
+                <h6 class="mb-3">Contact Information</h6>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                  <input type="tel" class="form-control" id="phone" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <h6 class="mb-3">Order Details</h6>
+                <div class="mb-3">
+                  <label for="orderType" class="form-label">Order Type</label>
+                  <select class="form-select" id="orderType">
+                    <option value="dine-in">Dine In</option>
+                    <option value="takeaway">Takeaway</option>
+                    <option value="delivery">Delivery</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="specialInstructions" class="form-label">Special Instructions</label>
+                  <textarea class="form-control" id="specialInstructions" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="preferredTime" class="form-label">Preferred Time</label>
+                  <input type="datetime-local" class="form-control" id="preferredTime">
+                </div>
+              </div>
+            </div>
+            
+            <div class="card bg-light border-0 mt-4">
+              <div class="card-body">
+                <h6 class="card-title mb-3">Order Summary</h6>
+                <div id="modal-cart-items"></div>
+                <hr class="my-3">
+                <div class="d-flex justify-content-between">
+                  <span class="fw-bold">Total:</span>
+                  <span class="fw-bold text-warning" id="modal-total">₱0</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="terms" required>
+                <label class="form-check-label small" for="terms">
+                  I agree to the <a href="#" class="text-warning text-decoration-none">terms and conditions</a>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-warning" onclick="window.mewbrew?.submitOrder()">Submit Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="pt-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="img/logo.jpg" alt="MewBrew Café" class="mb-3" style="max-width: 180px;">
+          <p class="mb-1"><i class="fas fa-map-marker-alt text-warning me-2"></i>123 Cat Street, Iloilo City</p>
+          <p><i class="fas fa-clock text-warning me-2"></i>Open Daily: 10:00 AM – 9:00 PM</p>
+        </div>
+        
+        <div class="col-md-4">
+          <h4 class="h5 mb-3">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="menu.html" class="text-decoration-none">Menu</a></li>
+            <li class="mb-2"><a href="cats.html" class="text-decoration-none">Our Cats</a></li>
+            <li class="mb-2"><a href="booking.html" class="text-decoration-none">Booking</a></li>
+            <li class="mb-2"><a href="events.html" class="text-decoration-none">Events</a></li>
+            <li class="mb-2"><a href="shop.html" class="text-decoration-none">Shop</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-4">
+          <h4 class="h5 mb-3">Connect With Us</h4>
+          <div class="d-flex gap-2 mb-3">
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <p class="mb-1"><i class="fas fa-envelope text-warning me-2"></i>contact@mewbrew.com</p>
+          <p><i class="fas fa-phone text-warning me-2"></i>(033) 123-4567</p>
+        </div>
+      </div>
+      
+      <div class="text-center pt-4 mt-4 border-top">
+        <p class="mb-0">© 2026 MewBrew Café. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

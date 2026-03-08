@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | MewBrew Café</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Skip to content link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.jpg" alt="MewBrew Café Logo" class="logo-img" height="40">
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white fs-2"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link px-3" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="menu.html"><i class="fas fa-coffee me-1"></i> Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="cats.html"><i class="fas fa-paw me-1"></i> Cats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="booking.html"><i class="fas fa-calendar-alt me-1"></i> Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="events.html"><i class="fas fa-gamepad me-1"></i> Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="shop.html"><i class="fas fa-shopping-bag me-1"></i> Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active px-3" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center text-white">
+          <h1 class="display-4 fw-bold mb-3">Contact Us</h1>
+          <p class="lead mb-0 opacity-75">We'd love to hear from you! Get in touch with any questions or feedback.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <!-- Contact Info -->
+      <section class="mb-5">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center p-4">
+              <div class="info-icon mx-auto mb-4">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3 class="h5 mb-3">Visit Us</h3>
+              <p class="mb-2">123 Cat Street, Iloilo City</p>
+              <p class="mb-3 small">5000 Iloilo, Philippines</p>
+              <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#directionsModal">
+                <i class="fas fa-directions me-2"></i>Get Directions
+              </button>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center p-4 position-relative">
+              <div class="info-icon mx-auto mb-4">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3 class="h5 mb-3">Opening Hours</h3>
+              <p class="mb-1"><strong>Monday - Sunday:</strong></p>
+              <p class="mb-3">10:00 AM – 9:00 PM</p>
+              <small class="text-muted">Last entry at 8:00 PM</small>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center p-4">
+              <div class="info-icon mx-auto mb-4">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h3 class="h5 mb-3">Call Us</h3>
+              <p class="mb-1">(033) 123-4567</p>
+              <p class="mb-3 small">+63 912 345 6789</p>
+              <a href="tel:+6331234567" class="btn btn-outline-warning">
+                <i class="fas fa-phone me-2"></i>Call Now
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center p-4">
+              <div class="info-icon mx-auto mb-4">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3 class="h5 mb-3">Email Us</h3>
+              <p class="mb-1">contact@mewbrew.com</p>
+              <p class="mb-3 small">adoptions@mewbrew.com</p>
+              <a href="mailto:contact@mewbrew.com" class="btn btn-outline-warning">
+                <i class="fas fa-envelope me-2"></i>Send Email
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form & Map -->
+      <section class="row g-4 mb-5">
+        <div class="col-lg-7">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4 p-md-5">
+              <div class="text-center mb-4">
+                <h2 class="h3 mb-2"><i class="fas fa-comment-dots text-warning me-3"></i>Send a Message</h2>
+                <p class="text-muted">Fill out the form below and we'll get back to you as soon as possible.</p>
+              </div>
+              
+              <form class="contact-form" novalidate>
+                <div class="row mb-3">
+                  <div class="col-md-6 mb-3">
+                    <label for="name" class="form-label"><i class="fas fa-user text-warning me-2"></i>Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                    <div class="invalid-feedback">Please enter your full name.</div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label"><i class="fas fa-envelope text-warning me-2"></i>Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="subject" class="form-label"><i class="fas fa-tag text-warning me-2"></i>Subject</label>
+                  <select class="form-select" id="subject" required>
+                    <option value="" disabled selected>Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="booking">Booking Question</option>
+                    <option value="adoption">Adoption Inquiry</option>
+                    <option value="feedback">Feedback/Suggestion</option>
+                    <option value="partnership">Partnership Opportunity</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a subject.</div>
+                </div>
+                
+                <div class="mb-4">
+                  <label for="message" class="form-label"><i class="fas fa-edit text-warning me-2"></i>Your Message</label>
+                  <textarea class="form-control" id="message" rows="6" placeholder="How can we help you? Please provide details..." required></textarea>
+                  <div class="invalid-feedback">Please enter your message.</div>
+                </div>
+                
+                <div class="text-center">
+                  <button type="submit" class="btn btn-warning btn-lg px-5">
+                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                  </button>
+                  <p class="small text-muted mt-3 mb-0">We typically respond within 24-48 hours during business days.</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-5">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4">
+              <h2 class="h3 mb-4"><i class="fas fa-map-marked-alt text-warning me-3"></i>Find Us</h2>
+              <div class="bg-light rounded p-4 text-center mb-4">
+                <i class="fas fa-map-marked-alt fa-5x text-warning mb-3"></i>
+                <h4 class="h5 mb-2">123 Cat Street</h4>
+                <p class="text-muted small mb-0">Iloilo City, Philippines</p>
+              </div>
+              <div class="bg-light rounded p-3">
+                <div class="d-flex mb-3">
+                  <i class="fas fa-parking text-warning mt-1 me-3"></i>
+                  <div class="small">
+                    <strong>Parking:</strong> Street parking available. There's also a paid parking lot one block away.
+                  </div>
+                </div>
+                <div class="d-flex">
+                  <i class="fas fa-bus text-warning mt-1 me-3"></i>
+                  <div class="small">
+                    <strong>Public Transport:</strong> Accessible via jeepney routes 10 and 15. Nearest stop is "Cat Street Corner".
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <div class="d-flex align-items-center mb-4">
+          <div class="icon-wrapper me-3">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <h2 class="section-title text-start mb-0">Frequently Asked Questions</h2>
+        </div>
+        
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item border-0 mb-3 shadow-sm">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq1">
+                <i class="fas fa-calendar-check me-3 text-warning"></i>
+                Do I need to book in advance?
+              </button>
+            </h3>
+            <div id="collapseFaq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                We highly recommend booking in advance, especially on weekends and holidays, as we have limited capacity to ensure a comfortable experience for both visitors and cats. Walk-ins are welcome based on availability.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item border-0 mb-3 shadow-sm">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq2">
+                <i class="fas fa-child me-3 text-warning"></i>
+                Are children allowed in the café?
+              </button>
+            </h3>
+            <div id="collapseFaq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes, children aged 8 and above are welcome when accompanied by an adult. We ask that children be supervised at all times and taught to be gentle with the cats.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item border-0 mb-3 shadow-sm">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq3">
+                <i class="fas fa-cat me-3 text-warning"></i>
+                Can I bring my own cat?
+              </button>
+            </h3>
+            <div id="collapseFaq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                For the safety and comfort of our rescue cats, we do not allow outside cats in the café. All our cats are vaccinated and have been carefully introduced to each other in our controlled environment.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item border-0 mb-3 shadow-sm">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq4">
+                <i class="fas fa-coffee me-3 text-warning"></i>
+                Do you serve food and drinks?
+              </button>
+            </h3>
+            <div id="collapseFaq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes, we have a full menu of coffee, tea, non-coffee drinks, and pastries. Food and drinks must be consumed in the designated human area, not in the cat zones.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item border-0 mb-3 shadow-sm">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq5">
+                <i class="fas fa-heart me-3 text-warning"></i>
+                How can I adopt a cat from MewBrew?
+              </button>
+            </h3>
+            <div id="collapseFaq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Visit our Cats page to see available cats, then fill out the adoption inquiry form. Our adoption process includes a meeting with the cat, application review, and a virtual home check. Adoption fees help cover veterinary costs.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Directions Modal -->
+  <div class="modal fade" id="directionsModal" tabindex="-1" aria-labelledby="directionsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="directionsModalLabel">
+            <i class="fas fa-directions text-warning me-2"></i>Get Directions
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-4">
+            <h6 class="fw-bold">Address:</h6>
+            <p class="mb-2">123 Cat Street, Iloilo City</p>
+            <p class="mb-3">5000 Iloilo, Philippines</p>
+            
+            <div class="alert alert-info">
+              <i class="fas fa-info-circle me-2"></i>
+              Coordinates: 10.7202° N, 122.5621° E
+            </div>
+          </div>
+          
+          <div class="mb-4">
+            <h6 class="fw-bold">Transport Options:</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="fas fa-bus text-warning me-2"></i>
+                <strong>Jeepney:</strong> Routes 10 & 15 to "Cat Street Corner"
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-taxi text-warning me-2"></i>
+                <strong>Taxi:</strong> Available throughout Iloilo City
+              </li>
+              <li>
+                <i class="fas fa-car text-warning me-2"></i>
+                <strong>Car:</strong> Street parking available
+              </li>
+            </ul>
+          </div>
+          
+          <div class="text-center">
+            <a href="https://maps.google.com/?q=123+Cat+Street,+Iloilo+City" target="_blank" class="btn btn-warning me-2">
+              <i class="fas fa-external-link-alt me-2"></i>Open in Google Maps
+            </a>
+            <button class="btn btn-outline-warning copy-coordinates-btn">
+              <i class="fas fa-copy me-2"></i>Copy Coordinates
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="pt-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="img/logo.jpg" alt="MewBrew Café" class="mb-3" style="max-width: 180px;">
+          <p class="mb-1"><i class="fas fa-map-marker-alt text-warning me-2"></i>123 Cat Street, Iloilo City</p>
+          <p><i class="fas fa-clock text-warning me-2"></i>Open Daily: 10:00 AM – 9:00 PM</p>
+        </div>
+        
+        <div class="col-md-4">
+          <h4 class="h5 mb-3">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="menu.html" class="text-decoration-none">Menu</a></li>
+            <li class="mb-2"><a href="cats.html" class="text-decoration-none">Our Cats</a></li>
+            <li class="mb-2"><a href="booking.html" class="text-decoration-none">Booking</a></li>
+            <li class="mb-2"><a href="events.html" class="text-decoration-none">Events</a></li>
+            <li class="mb-2"><a href="shop.html" class="text-decoration-none">Shop</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-4">
+          <h4 class="h5 mb-3">Connect With Us</h4>
+          <div class="d-flex gap-2 mb-3">
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <p class="mb-1"><i class="fas fa-envelope text-warning me-2"></i>contact@mewbrew.com</p>
+          <p><i class="fas fa-phone text-warning me-2"></i>(033) 123-4567</p>
+        </div>
+      </div>
+      
+      <div class="text-center pt-4 mt-4 border-top">
+        <p class="mb-0">© 2026 MewBrew Café. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
