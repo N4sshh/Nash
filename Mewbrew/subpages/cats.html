@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Our Cats | MewBrew Café</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="cats-page">
+  <!-- Skip to content link -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../img/logo.jpg" alt="MewBrew Café Logo" class="logo-img" height="40">
+      </a>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars text-white fs-2"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link px-3" href="../index.html"><i class="fas fa-home me-1"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="menu.html"><i class="fas fa-coffee me-1"></i> Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active px-3" href="cats.html"><i class="fas fa-paw me-1"></i> Cats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="booking.html"><i class="fas fa-calendar-alt me-1"></i> Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="events.html"><i class="fas fa-gamepad me-1"></i> Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="shop.html"><i class="fas fa-shopping-bag me-1"></i> Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center text-white">
+          <h1 class="display-4 fw-bold mb-3">Meet Our Cats</h1>
+          <p class="lead mb-0 opacity-75">These adorable rescue cats are looking for their forever homes</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content" class="py-5">
+    <div class="container">
+      <!-- Adoption Counter -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-8">
+          <div class="card border-0 shadow-sm bg-success bg-opacity-10">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center justify-content-between">
+                <div>
+                  <h5 class="mb-1"><i class="fas fa-home text-success me-2"></i>Adopted This Month</h5>
+                  <p class="h2 text-success mb-0">3 Cats</p>
+                </div>
+                <div>
+                  <h5 class="mb-1"><i class="fas fa-paw text-warning me-2"></i>Available Now</h5>
+                  <p class="h2 text-warning mb-0">4 Cats</p>
+                </div>
+                <div>
+                  <h5 class="mb-1"><i class="fas fa-heart text-danger me-2"></i>Total Adopted</h5>
+                  <p class="h2 text-danger mb-0">15 Cats</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="row mb-4">
+        <div class="col-md-6 mx-auto">
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0">
+              <i class="fas fa-search text-warning"></i>
+            </span>
+            <input type="search" class="form-control border-start-0" placeholder="Search cats by name or personality..." id="catSearch">
+          </div>
+        </div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <ul class="nav nav-pills justify-content-center mb-4" id="catTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="all-cats-tab" data-bs-toggle="pill" data-bs-target="#all-cats" type="button" role="tab" aria-controls="all-cats" aria-selected="true">
+            <i class="fas fa-cat me-2"></i>All Cats
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="available-cats-tab" data-bs-toggle="pill" data-bs-target="#available-cats" type="button" role="tab" aria-controls="available-cats" aria-selected="false">
+            <i class="fas fa-check-circle me-2 text-success"></i>Available
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="adopted-cats-tab" data-bs-toggle="pill" data-bs-target="#adopted-cats" type="button" role="tab" aria-controls="adopted-cats" aria-selected="false">
+            <i class="fas fa-home me-2 text-info"></i>Adopted
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="favorite-cats-tab" data-bs-toggle="pill" data-bs-target="#favorite-cats" type="button" role="tab" aria-controls="favorite-cats" aria-selected="false">
+            <i class="fas fa-heart me-2 text-danger"></i>Favorites
+          </button>
+        </li>
+      </ul>
+
+      <!-- Personality Filter Dropdown -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <select class="form-select w-auto" id="personalityFilter">
+            <option value="all">All Personalities</option>
+            <option value="playful">Playful</option>
+            <option value="shy">Shy</option>
+            <option value="energetic">Energetic</option>
+            <option value="loud">Loud</option>
+            <option value="curious">Curious</option>
+            <option value="quiet">Quiet</option>
+            <option value="alert">Alert</option>
+            <option value="friendly">Friendly</option>
+            <option value="cuddly">Cuddly</option>
+            <option value="kneader">Kneader</option>
+          </select>
+        </div>
+        <div>
+          <span class="text-muted me-2">Sort by:</span>
+          <select class="form-select w-auto d-inline-block" id="sortFilter">
+            <option value="name">Name</option>
+            <option value="age">Age</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Featured Cat Carousel -->
+      <section class="mb-5">
+        <h2 class="text-center mb-4">
+          <i class="fas fa-crown text-warning me-2"></i>Cat of the Week
+        </h2>
+        <div id="featuredCatCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card border-0 shadow-sm">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-4">
+                    <img src="../img/cats/mini.jpg" class="img-fluid rounded-start" style="height: 250px; width: 100%; object-fit: cover;" alt="Mini">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body p-4">
+                      <span class="badge bg-warning text-dark mb-3">🐱 Featured Cat</span>
+                      <h3 class="h2 mb-3">Meet Mini!</h3>
+                      <div class="d-flex gap-3 mb-3">
+                        <span class="badge bg-light text-dark"><i class="fas fa-birthday-cake me-2"></i>9 months</span>
+                        <span class="badge bg-light text-dark"><i class="fas fa-palette me-2"></i>Calico</span>
+                        <span class="badge bg-light text-dark"><i class="fas fa-heart me-2"></i>Playful & Energetic</span>
+                      </div>
+                      <p class="lead mb-4">Mini is famous for her bread-making skills! She loves to knead on soft blankets and pillows. She's looking for her forever home!</p>
+                      <div class="d-flex gap-3">
+                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#adoptionModal" data-cat-name="Mini">Adopt Mini</button>
+                        <button class="btn btn-outline-warning favorite-btn" onclick="toggleFavorite(this, 'mini')">
+                          <i class="far fa-heart"></i> Favorite
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Adoption Stats Progress -->
+      <div class="card border-0 shadow-sm bg-light mb-5">
+        <div class="card-body p-4">
+          <h5 class="mb-3"><i class="fas fa-chart-line text-warning me-2"></i>2026 Adoption Goal</h5>
+          <div class="progress mb-3" style="height: 30px;">
+            <div class="progress-bar bg-success" style="width: 75%">15 Adopted</div>
+            <div class="progress-bar bg-warning" style="width: 25%">5 Available</div>
+          </div>
+          <p class="small text-muted mb-0">Goal: 20 adoptions this year • 75% complete</p>
+        </div>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="tab-content">
+        <!-- All Cats Tab -->
+        <div class="tab-pane fade show active" id="all-cats" role="tabpanel" aria-labelledby="all-cats-tab">
+          <div class="row g-4" id="all-cats-container">
+            <!-- Cat 1 - Tangol -->
+            <div class="col-md-6 col-lg-3 cat-card" data-status="available" data-personality="playful loud energetic" data-cat-id="tangol">
+              <div class="card h-100 border-0 shadow-sm position-relative">
+                <div class="position-absolute top-0 end-0 m-2 z-1">
+                  <button class="btn btn-sm btn-light rounded-circle favorite-toggle" onclick="toggleFavorite(this, 'tangol')" style="width: 36px; height: 36px;">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+                <div class="cat-image">
+                  <img src="../img/cats/tangol.jpg" alt="Tangol - Orange and White Cat" class="img-fluid w-100 h-100">
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h3 class="h4 mb-0">Tangol</h3>
+                    <span class="badge bg-success status-badge">Available</span>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="badge bg-light text-dark"><i class="fas fa-birthday-cake me-1"></i> 1 year</span>
+                    <span class="badge bg-light text-dark"><i class="fas fa-palette me-1"></i> Orange & White</span>
+                  </div>
+                  <div class="mb-3 personality-tags">
+                    <span class="badge bg-primary me-1" data-personality="playful"><i class="fas fa-heart me-1"></i>Playful</span>
+                    <span class="badge bg-info me-1" data-personality="loud"><i class="fas fa-volume-up me-1"></i>Loud</span>
+                    <span class="badge bg-warning me-1" data-personality="energetic"><i class="fas fa-bolt me-1"></i>Energetic</span>
+                  </div>
+                  <p class="small text-muted mb-3">Tangol loves to roll around and bite stuff! He's a playful and loud cat who keeps everyone entertained.</p>
+                  <button class="btn btn-warning w-100 mb-2" data-bs-toggle="modal" data-bs-target="#adoptionModal" data-cat-name="Tangol">
+                    <i class="fas fa-paw me-2"></i>Adopt Me
+                  </button>
+                  <button class="btn btn-outline-warning w-100 btn-sm view-details" data-cat-id="tangol" data-bs-toggle="modal" data-bs-target="#catDetailsModal">
+                    <i class="fas fa-info-circle me-2"></i>Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cat 2 - Xia Ming -->
+            <div class="col-md-6 col-lg-3 cat-card" data-status="available" data-personality="shy curious quiet friendly" data-cat-id="xia-ming">
+              <div class="card h-100 border-0 shadow-sm position-relative">
+                <div class="position-absolute top-0 end-0 m-2 z-1">
+                  <button class="btn btn-sm btn-light rounded-circle favorite-toggle" onclick="toggleFavorite(this, 'xia-ming')" style="width: 36px; height: 36px;">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+                <div class="cat-image">
+                  <img src="../img/cats/Xian_Ming.jpg" alt="Xia Ming - Tilapya Colored Cat" class="img-fluid w-100 h-100">
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h3 class="h4 mb-0">Xia Ming</h3>
+                    <span class="badge bg-success status-badge">Available</span>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="badge bg-light text-dark"><i class="fas fa-birthday-cake me-1"></i> 9 months</span>
+                    <span class="badge bg-light text-dark"><i class="fas fa-palette me-1"></i> Tilapya</span>
+                  </div>
+                  <div class="mb-3 personality-tags">
+                    <span class="badge bg-secondary me-1" data-personality="shy"><i class="fas fa-eye-slash me-1"></i>Shy</span>
+                    <span class="badge bg-info me-1" data-personality="curious"><i class="fas fa-eye me-1"></i>Curious</span>
+                    <span class="badge bg-secondary me-1" data-personality="quiet"><i class="fas fa-volume-mute me-1"></i>Quiet</span>
+                    <span class="badge bg-success me-1" data-personality="friendly"><i class="fas fa-smile me-1"></i>Friendly</span>
+                  </div>
+                  <p class="small text-muted mb-3">Xia Ming rarely meows and is always curious about everything. Shy at first but warms up quickly.</p>
+                  <button class="btn btn-warning w-100 mb-2" data-bs-toggle="modal" data-bs-target="#adoptionModal" data-cat-name="Xia Ming">
+                    <i class="fas fa-paw me-2"></i>Adopt Me
+                  </button>
+                  <button class="btn btn-outline-warning w-100 btn-sm view-details" data-cat-id="xia-ming" data-bs-toggle="modal" data-bs-target="#catDetailsModal">
+                    <i class="fas fa-info-circle me-2"></i>Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cat 3 - Ying Yang -->
+            <div class="col-md-6 col-lg-3 cat-card" data-status="available" data-personality="energetic alert curious" data-cat-id="ying-yang">
+              <div class="card h-100 border-0 shadow-sm position-relative">
+                <div class="position-absolute top-0 end-0 m-2 z-1">
+                  <button class="btn btn-sm btn-light rounded-circle favorite-toggle" onclick="toggleFavorite(this, 'ying-yang')" style="width: 36px; height: 36px;">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+                <div class="cat-image">
+                  <img src="../img/cats/Ying_Yang.jpg" alt="Ying Yang - Black and White Cat" class="img-fluid w-100 h-100">
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h3 class="h4 mb-0">Ying Yang</h3>
+                    <span class="badge bg-success status-badge">Available</span>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="badge bg-light text-dark"><i class="fas fa-birthday-cake me-1"></i> 9 months</span>
+                    <span class="badge bg-light text-dark"><i class="fas fa-palette me-1"></i> Black & White</span>
+                  </div>
+                  <div class="mb-3 personality-tags">
+                    <span class="badge bg-primary me-1" data-personality="energetic"><i class="fas fa-bolt me-1"></i>Energetic</span>
+                    <span class="badge bg-warning me-1" data-personality="alert"><i class="fas fa-eye me-1"></i>Alert</span>
+                    <span class="badge bg-info me-1" data-personality="curious"><i class="fas fa-question me-1"></i>Curious</span>
+                  </div>
+                  <p class="small text-muted mb-3">Ying Yang loves to watch people gossip and is always curious about anything happening around.</p>
+                  <button class="btn btn-warning w-100 mb-2" data-bs-toggle="modal" data-bs-target="#adoptionModal" data-cat-name="Ying Yang">
+                    <i class="fas fa-paw me-2"></i>Adopt Me
+                  </button>
+                  <button class="btn btn-outline-warning w-100 btn-sm view-details" data-cat-id="ying-yang" data-bs-toggle="modal" data-bs-target="#catDetailsModal">
+                    <i class="fas fa-info-circle me-2"></i>Details
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cat 4 - Mini -->
+            <div class="col-md-6 col-lg-3 cat-card" data-status="available" data-personality="playful energetic kneader cuddly" data-cat-id="mini">
+              <div class="card h-100 border-0 shadow-sm position-relative">
+                <div class="position-absolute top-0 end-0 m-2 z-1">
+                  <button class="btn btn-sm btn-light rounded-circle favorite-toggle" onclick="toggleFavorite(this, 'mini')" style="width: 36px; height: 36px;">
+                    <i class="far fa-heart"></i>
+                  </button>
+                </div>
+                <div class="cat-image">
+                  <img src="../img/cats/mini.jpg" alt="Mini - Calico Cat" class="img-fluid w-100 h-100">
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h3 class="h4 mb-0">Mini</h3>
+                    <span class="badge bg-success status-badge">Available</span>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="badge bg-light text-dark"><i class="fas fa-birthday-cake me-1"></i> 9 months</span>
+                    <span class="badge bg-light text-dark"><i class="fas fa-palette me-1"></i> Calico</span>
+                  </div>
+                  <div class="mb-3 personality-tags">
+                    <span class="badge bg-primary me-1" data-personality="playful"><i class="fas fa-heart me-1"></i>Playful</span>
+                    <span class="badge bg-warning me-1" data-personality="energetic"><i class="fas fa-bolt me-1"></i>Energetic</span>
+                    <span class="badge bg-success me-1" data-personality="kneader"><i class="fas fa-paw me-1"></i>Kneader</span>
+                    <span class="badge bg-info me-1" data-personality="cuddly"><i class="fas fa-hand-holding-heart me-1"></i>Cuddly</span>
+                  </div>
+                  <p class="small text-muted mb-3">Mini is famous for her bread-making skills! She loves to knead on soft blankets and pillows.</p>
+                  <button class="btn btn-warning w-100 mb-2" data-bs-toggle="modal" data-bs-target="#adoptionModal" data-cat-name="Mini">
+                    <i class="fas fa-paw me-2"></i>Adopt Me
+                  </button>
+                  <button class="btn btn-outline-warning w-100 btn-sm view-details" data-cat-id="mini" data-bs-toggle="modal" data-bs-target="#catDetailsModal">
+                    <i class="fas fa-info-circle me-2"></i>Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Available Cats Tab -->
+        <div class="tab-pane fade" id="available-cats" role="tabpanel" aria-labelledby="available-cats-tab">
+          <div class="row g-4" id="available-cats-container">
+            <!-- Will be populated by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Adopted Cats Tab -->
+        <div class="tab-pane fade" id="adopted-cats" role="tabpanel" aria-labelledby="adopted-cats-tab">
+          <div class="row g-4">
+            <div class="col-12 text-center py-5">
+              <i class="fas fa-home fa-4x text-muted mb-3"></i>
+              <h5>No adopted cats to show</h5>
+              <p class="text-muted">Check back later to see success stories!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Favorite Cats Tab -->
+        <div class="tab-pane fade" id="favorite-cats" role="tabpanel" aria-labelledby="favorite-cats-tab">
+          <div class="row g-4" id="favorite-cats-container">
+            <!-- Will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Adoption Process Accordion -->
+      <section class="my-5">
+        <h2 class="text-center mb-4">
+          <i class="fas fa-info-circle text-warning me-3"></i>Adoption Process
+        </h2>
+        <div class="accordion" id="adoptionProcess">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#step1">
+                <span class="badge bg-warning me-3">1</span> Visit & Bond
+              </button>
+            </h2>
+            <div id="step1" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                Spend time with the cats at our café to see who you connect with. Our staff can help introduce you to cats that match your lifestyle.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step2">
+                <span class="badge bg-warning me-3">2</span> Submit Application
+              </button>
+            </h2>
+            <div id="step2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Fill out our adoption inquiry form below or ask staff for a paper application. We'll review it within 2-3 business days.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step3">
+                <span class="badge bg-warning me-3">3</span> Home Check
+              </button>
+            </h2>
+            <div id="step3" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                We conduct a virtual home visit to ensure a safe environment for your new family member. This usually takes 15-20 minutes.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#step4">
+                <span class="badge bg-warning me-3">4</span> Finalize Adoption
+              </button>
+            </h2>
+            <div id="step4" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                Complete the paperwork, pay the adoption fee, and bring your new friend home! We'll provide a starter kit with food and supplies.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meet the Team -->
+      <section class="mb-5">
+        <h2 class="text-center mb-4">
+          <i class="fas fa-users text-warning me-2"></i>Meet the Cat Care Team
+        </h2>
+        <p class="text-center text-muted mb-5">The wonderful people who take care of our furry friends every day</p>
+        
+        <div class="row g-4">
+          <!-- Nash Eicker Datiles -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <div class="card-body p-4">
+                <div class="mb-3">
+                  <img src="../img/team/nash.jpg" class="rounded-circle img-fluid border border-3 border-warning team-img" style="width: 120px; height: 120px; object-fit: cover;" alt="Nash Eicker Datiles" onerror="this.src='https://ui-avatars.com/api/?name=Nash+Eicker+Datiles&background=ffb74d&color=fff&size=120'">
+                </div>
+                <h4 class="h5 mb-1">Nash Eicker Datiles</h4>
+                <p class="badge bg-warning text-dark mb-3">Lead Cat Caretaker</p>
+                <p class="small text-muted">"Cats are my life! I've been working with rescues for 5 years."</p>
+                <div class="d-flex justify-content-center gap-2">
+                  <a href="#" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 32px; height: 32px;"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 32px; height: 32px;"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 32px; height: 32px;"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Naya Faye Barbero -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <div class="card-body p-4">
+                <div class="mb-3">
+                  <img src="../img/team/naya.jpg" class="rounded-circle img-fluid border border-3 border-warning team-img" style="width: 120px; height: 120px; object-fit: cover;" alt="Naya Faye Barbero" onerror="this.src='https://ui-avatars.com/api/?name=Naya+Faye+Barbero&background=ffb74d&color=fff&size=120'">
+                </div>
+                <h4 class="h5 mb-1">Naya Faye Barbero</h4>
+                <p class="badge bg-warning text-dark mb-3">Adoption Coordinator</p>
+                <p class="small text-muted">"Matching cats with their forever families is my passion."</p>
+                <div class="d-flex justify-content-center gap-2">
+                  <a href="#" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 32px; height: 32px;"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 32px; height: 32px;"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 32px; height: 32px;"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Rian Jino-o -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <div class="card-body p-4">
+                <div class="mb-3">
+                  <img src="../img/team/rian.jpg" class="rounded-circle img-fluid border border-3 border-warning team-img" style="width: 120px; height: 120px; object-fit: cover;" alt="Rian Mae Jino-o" onerror="this.src='https://ui-avatars.com/api/?name=Rian+Jino-o&background=ffb74d&color=fff&size=120'">
+                </div>
+                <h4 class="h5 mb-1">Rian Mae Jino-o</h4>
+                <p class="badge bg-warning text-dark mb-3">Cat Behavior Specialist</p>
+                <p class="small text-muted">"I help our cats feel comfortable and socialize with visitors."</p>
+                <div class="d-flex justify-content-center gap-2">
+                  <a href="#" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 32px; height: 32px;"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 32px; height: 32px;"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 32px; height: 32px;"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Joel Dionson Jr -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <div class="card-body p-4">
+                <div class="mb-3">
+                  <img src="../img/team/joel.jpg" class="rounded-circle img-fluid border border-3 border-warning team-img" style="width: 120px; height: 120px; object-fit: cover;" alt="Joel Dionson Jr" onerror="this.src='https://ui-avatars.com/api/?name=Joel+Dionson+Jr&background=ffb74d&color=fff&size=120'">
+                </div>
+                <h4 class="h5 mb-1">Joel Dionson Jr</h4>
+                <p class="badge bg-warning text-dark mb-3">Veterinary Assistant</p>
+                <p class="small text-muted">"Keeping our cats healthy and happy is my top priority."</p>
+                <div class="d-flex justify-content-center gap-2">
+                  <a href="#" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 32px; height: 32px;"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 32px; height: 32px;"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="btn btn-sm btn-outline-warning rounded-circle p-0" style="width: 32px; height: 32px;"><i class="fab fa-twitter"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Success Stories Modal Trigger -->
+      <div class="text-center mb-5">
+        <button class="btn btn-outline-warning btn-lg" data-bs-toggle="modal" data-bs-target="#successStoriesModal">
+          <i class="fas fa-star me-2"></i>Read Success Stories
+        </button>
+      </div>
+
+      <!-- Adoption Form -->
+      <section class="form-section">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4 p-md-5">
+                <h2 class="card-title h3 mb-2">Adoption Inquiry</h2>
+                <p class="text-muted mb-4">Interested in adopting one of our cats? Please fill out the form below.</p>
+                
+                <form class="adoption-form needs-validation" novalidate>
+                  <div class="mb-3">
+                    <label for="name" class="form-label"><i class="fas fa-user text-warning me-2"></i>Your Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                    <div class="invalid-feedback">Please enter your full name.</div>
+                  </div>
+                  
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="email" class="form-label"><i class="fas fa-envelope text-warning me-2"></i>Email Address</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                      <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="phone" class="form-label"><i class="fas fa-phone text-warning me-2"></i>Phone Number</label>
+                      <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                      <div class="invalid-feedback">Please enter your phone number.</div>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="cat" class="form-label"><i class="fas fa-cat text-warning me-2"></i>Cat You're Interested In</label>
+                    <select class="form-select" id="cat" required>
+                      <option value="" disabled selected>Select a cat</option>
+                      <option value="tangol">Tangol</option>
+                      <option value="xia-ming">Xia Ming</option>
+                      <option value="ying-yang">Ying Yang</option>
+                      <option value="mini">Mini</option>
+                      <option value="not-sure">Not Sure Yet</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a cat you're interested in.</div>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <label for="experience" class="form-label"><i class="fas fa-home text-warning me-2"></i>Previous Cat Experience</label>
+                    <textarea class="form-control" id="experience" rows="3" placeholder="Tell us about your experience with pets, if any"></textarea>
+                  </div>
+                  
+                  <div class="mb-4">
+                    <label for="message" class="form-label"><i class="fas fa-comment text-warning me-2"></i>Additional Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Any other information you'd like to share"></textarea>
+                  </div>
+                  
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-warning btn-lg">
+                      <i class="fas fa-paper-plane me-2"></i>Submit Inquiry
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sponsor a Cat Section -->
+      <section class="mt-5">
+        <div class="card border-0 shadow-sm bg-success bg-opacity-10">
+          <div class="card-body p-5">
+            <div class="row align-items-center">
+              <div class="col-md-2 text-center mb-4 mb-md-0">
+                <i class="fas fa-donate fa-5x text-success"></i>
+              </div>
+              <div class="col-md-7 mb-4 mb-md-0">
+                <h3 class="h4 mb-3">Can't Adopt? Sponsor a Cat!</h3>
+                <p class="mb-0">For just ₱500/month, you can sponsor a cat's food, litter, and vet care. Visit the café to see your sponsored cat anytime!</p>
+              </div>
+              <div class="col-md-3 text-center">
+                <button class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#sponsorModal">Sponsor Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Adoption Modal - FIXED with data-cat-name support -->
+  <div class="modal fade" id="adoptionModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Start Adoption Process</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-3">You're interested in adopting <span id="selectedCatName">this cat</span>!</p>
+          <p class="small text-muted mb-3">Please fill out the adoption form below or talk to our staff at the café.</p>
+          <div class="d-grid gap-2">
+            <button class="btn btn-warning" data-bs-dismiss="modal" onclick="document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' }); document.getElementById('name').focus();">Continue to Form</button>
+            <button class="btn btn-outline-warning" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cat Details Modal -->
+  <div class="modal fade" id="catDetailsModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="catDetailsModalLabel">Cat Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="catDetailsContent">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-warning" id="adoptFromDetailsBtn" data-bs-toggle="modal" data-bs-target="#adoptionModal">Adopt Me</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Stories Modal -->
+  <div class="modal fade" id="successStoriesModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><i class="fas fa-star text-warning me-2"></i>Success Stories</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="../img/cats/tangol.jpg" class="rounded-circle me-3" width="50" height="50" style="object-fit: cover;">
+                    <div>
+                      <h6 class="mb-0">Tangol</h6>
+                      <small class="text-muted">Adopted by Reyes Family</small>
+                    </div>
+                  </div>
+                  <p class="small">"Tangol is now the king of our home! He loves playing with our kids and cuddling at night."</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="../img/cats/mini.jpg" class="rounded-circle me-3" width="50" height="50" style="object-fit: cover;">
+                    <div>
+                      <h6 class="mb-0">Mini</h6>
+                      <small class="text-muted">Adopted by Santos Family</small>
+                    </div>
+                  </div>
+                  <p class="small">"Mini still makes biscuits every day! She's the sweetest cat we've ever had."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sponsor Modal -->
+  <div class="modal fade" id="sponsorModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sponsor a Cat</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-3">Choose a cat to sponsor:</p>
+          <select class="form-select mb-3">
+            <option>Tangol</option>
+            <option>Xia Ming</option>
+            <option>Ying Yang</option>
+            <option>Mini</option>
+          </select>
+          <p class="small text-muted">Monthly sponsorship: ₱500</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-warning" data-bs-dismiss="modal">Proceed to Payment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="pt-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="../img/logo.jpg" alt="MewBrew Café" class="mb-3" style="max-width: 180px;">
+          <p class="mb-1"><i class="fas fa-map-marker-alt text-warning me-2"></i>123 Cat Street, Iloilo City</p>
+          <p><i class="fas fa-clock text-warning me-2"></i>Open Daily: 10:00 AM – 9:00 PM</p>
+        </div>
+        
+        <div class="col-md-4">
+          <h4 class="h5 mb-3">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="../index.html" class="text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="menu.html" class="text-decoration-none">Menu</a></li>
+            <li class="mb-2"><a href="cats.html" class="text-decoration-none">Our Cats</a></li>
+            <li class="mb-2"><a href="booking.html" class="text-decoration-none">Booking</a></li>
+            <li class="mb-2"><a href="events.html" class="text-decoration-none">Events</a></li>
+            <li class="mb-2"><a href="shop.html" class="text-decoration-none">Shop</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-4">
+          <h4 class="h5 mb-3">Connect With Us</h4>
+          <div class="d-flex gap-2 mb-3">
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="btn btn-outline-warning rounded-circle p-0 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <p class="mb-1"><i class="fas fa-envelope text-warning me-2"></i>contact@mewbrew.com</p>
+          <p><i class="fas fa-phone text-warning me-2"></i>(033) 123-4567</p>
+        </div>
+      </div>
+      
+      <div class="text-center pt-4 mt-4 border-top">
+        <p class="mb-0">© 2026 MewBrew Café. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../js/main.js"></script>
+  <script src="../js/cats.js"></script>
+</body>
+</html>
